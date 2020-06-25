@@ -40,6 +40,7 @@
     text-decoration: none;
     color: #A8AEB5;
     padding-top: 6px;
+    font-size: 14px;
 
 }
 .user-nav-item {
@@ -53,6 +54,7 @@
     height: 24px;
     background-image: url('./app-header-image/app-header-icon/ic_access_location_top.png');
     left: -36px;
+    top: 2px;
 
 }
 .user-nav-item:nth-child(2)::before {
@@ -61,7 +63,8 @@
     width: 24px;
     height: 24px;
     background-image: url('./app-header-image/app-header-icon/ic_local_phone_top.png');
-    left: -40px;
+    top: 2px;
+    left: -35px;
 
 }
 .user-nav-item:nth-child(3)::before {
@@ -70,7 +73,8 @@
     width: 24px;
     height: 24px;
     background-image: url('./app-header-image/app-header-icon/ic_exit_top.png');
-    left: -45px;
+    top: 2px;
+    left: -35px;
 
 }
 .user-nav-item:nth-child(4)::before {
@@ -79,12 +83,13 @@
     width: 24px;
     height: 24px;
     background-image: url('./app-header-image/app-header-icon/ic_register_top.png');
-    left: -45px;
+    top: 2px;
+    left: -35px;
 
 }
 .user-nav-item:last-child {
     margin: 0
 }
 .user-nav-item:first-child {
-    margin-right: 79px;
+    margin-right: 91px;
 }

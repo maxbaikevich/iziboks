@@ -23,10 +23,13 @@ export default class Select extends Component {
   render() {
     const { vision } = this.state;
     const { datas } = this.props;
-    console.log(datas);
+   
     let classNames = "select-list select-list__none";
+    let classNameDiv ="select-title" 
     if (vision) {
       classNames = "select-list select-list__block";
+      classNameDiv += " div-activ"
+      
     }
     let elements = [];
     if (datas) {
@@ -41,7 +44,7 @@ export default class Select extends Component {
     return (
       <div className="select-box">
         <div className="select" onClick={this.onSelectClick}>
-          <p className="select-title">{this.props.options}</p>
+          <p className={classNameDiv}>{this.props.options}</p>
         </div>
 
         <ul className={classNames}>

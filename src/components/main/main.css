@@ -60,6 +60,7 @@
 
 .btn-light {
     background-color: #B7E3E8;
+    width:121px;
 }
 
 .btn-dark {
@@ -126,9 +127,9 @@
     width: 100px;
     text-align: center;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: #B7E3E8;
-    letter-spacing: 1.5px;
+    line-height: 16px;
 }
 .advantages-item:nth-child(1)::before {
     position: absolute;

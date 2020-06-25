@@ -39,10 +39,10 @@
     height: 200px;
     padding-top: 25px;
     padding-bottom: 20px;
-    
     border-radius: 0px 0px 20px 20px;
-   
-
+}
+.div-activ {
+    color:#4BBAC5;
 }
 .sekect-list__item {
     position: relative;
