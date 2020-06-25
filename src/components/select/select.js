@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./select.css";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export default class Select extends Component {
   constructor() {
@@ -15,6 +17,8 @@ export default class Select extends Component {
         };
       });
     };
+   
+
   }
   render() {
     const { vision } = this.state;
@@ -24,24 +28,25 @@ export default class Select extends Component {
     if (vision) {
       classNames = "select-list select-list__block";
     }
-    let elements = []
+    let elements = [];
     if (datas) {
       elements = datas.map((item) => {
         return (
-          
           <li key={item.id} className="sekect-list__item">
             {item.label}
           </li>
         );
       });
-
     }
     return (
       <div className="select-box">
         <div className="select" onClick={this.onSelectClick}>
           <p className="select-title">{this.props.options}</p>
         </div>
-        <ul className={classNames}>{elements}</ul>
+
+        <ul className={classNames}>
+          <PerfectScrollbar onScrollY={container => console.log(`scrolled to: ${container.scrollTop}.`)}>{elements}</PerfectScrollbar>
+        </ul>
       </div>
     );
   }
