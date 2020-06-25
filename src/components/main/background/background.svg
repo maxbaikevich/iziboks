@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.27" height="520.001" viewBox="0 0 1920.27 520.001">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="1920.27" height="520.001" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="fon_IZI___1920" data-name="fon IZI___1920" clip-path="url(#clip-path)">
+    <g id="star" transform="translate(277 -111.999)">
+      <rect id="Прямоугольник_558" data-name="Прямоугольник 558" width="1920" height="520" transform="translate(-276.73 111.999)" fill="#6946c7"/>
+      <path id="Контур_2753" data-name="Контур 2753" d="M1920,643.333V768.126H0V644.859C83.212,630.993,189,622.7,304.465,622.7H1624.888c110.949,0,213.19,7.7,295.112,20.633" transform="translate(-276.73 -136.126)" fill="#8e27cb"/>
+      <path id="Контур_2754" data-name="Контур 2754" d="M0,0H1920V123.134c-83.212,13.932-189.645,22.358-305.432,22.358H294.467c-110.627,0-212.867-7.63-294.467-20.5Z" transform="translate(-276.73 111.999)" fill="#f6cd23"/>
+      <path id="Контур_2755" data-name="Контур 2755" d="M1184.317,0H1920V126.8L734.393,520H0V392.888Z" transform="translate(-276.73 111.999)" fill="#1fa9c0"/>
+      <path id="Контур_2756" data-name="Контур 2756" d="M648.582,0h735.154V123.134c-83.188,13.932-189.592,22.358-305.347,22.358L208.058,146Z" transform="translate(259.212 111.999)" fill="#25cbc2"/>
+      <path id="Контур_2757" data-name="Контур 2757" d="M734.187,768.092H0V644.759C83.188,630.893,188.947,622.6,304.38,622.6l870.12-.007Z" transform="translate(-276.73 -136.093)" fill="#0786db"/>
+      <rect id="box" width="1920" height="520" transform="translate(-277 112)" fill="#263548" opacity="0.1"/>
+    </g>
+  </g>
+</svg>
