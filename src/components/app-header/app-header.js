@@ -9,7 +9,7 @@ const AppHeader = () => {
       <div className="wrapper">
         <nav className="app-header__logos">
           <ul className="logos-list">
-            <li classNAme="logos-list__item logos-list__item-first">
+            <li className="logos-list__item logos-list__item-first">
               <a className="logos-list__link-1" href="">
                 <img
                   className="logos-list__image"
@@ -20,7 +20,7 @@ const AppHeader = () => {
                 />
               </a>
             </li>
-            <li classNAme="logos-list__item">
+            <li className="logos-list__item">
               <a className="logos-list__link" href="">
                 <img
                   className="logos-list__image-2"

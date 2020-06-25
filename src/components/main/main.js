@@ -3,7 +3,22 @@ import React from "react";
 import "./main.css";
 import Select from "../select";
 
-const Main = (props) => {
+const Main = () => {
+  const selectData = [
+    { label: 'любая рубрика', id: 1 },
+    { label: 'любая рубрика',id: 2},
+    { label: 'любая рубрика',id: 3},
+    { label: 'любая рубрика',id: 4},
+    { label: 'любая рубрика',id: 5},
+  ];
+  const selectData1 = [
+    { label: 'любая подрубрика'},
+    { label: 'любая подрубрика'},
+    { label: 'любая подрубрика'},
+    { label: 'любая подрубрика'},
+    { label: 'любая подрубрика'}
+  ];
+
   
   return (
     <main className="main">
@@ -18,8 +33,8 @@ const Main = (props) => {
             placeholder="Пойск компаний и услуг"
           ></input>
           <button className="main-btn">Доп. параметры</button>
-          <Select options={"Любая рубрика"} />
-          <Select options={"Любая подрубрика"} />
+          <Select options={"Любая рубрика"} datas ={selectData} />
+          <Select options={"Любая подрубрика"} datas = {selectData1} />
           <div className="btn-groop">
             <button className="btn btn-dark">Найти</button>
             <button className="btn btn-light">На карте</button>
