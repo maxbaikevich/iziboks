@@ -55,6 +55,7 @@
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
+    cursor: pointer;
 
 }
 
@@ -96,6 +97,7 @@
     text-align: left;
     padding-left: 25px;
     margin-left: -5px;
+    cursor: pointer;
 
 }
 

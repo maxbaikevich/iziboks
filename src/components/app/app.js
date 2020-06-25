@@ -5,12 +5,10 @@ import Main from "../main";
 import "./app.css";
 
 const App = () => {
-  
-
   return (
     <div className="app">
       <AppHeader />
-      <Main/>
+      <Main />
       <Footer />
     </div>
   );

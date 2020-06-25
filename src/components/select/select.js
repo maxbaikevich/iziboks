@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./select.css";
 import PerfectScrollbar from "react-perfect-scrollbar";
-import 'react-perfect-scrollbar/dist/css/styles.css';
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 export default class Select extends Component {
   constructor() {
@@ -17,19 +17,16 @@ export default class Select extends Component {
         };
       });
     };
-   
-
   }
   render() {
     const { vision } = this.state;
     const { datas } = this.props;
-   
+
     let classNames = "select-list select-list__none";
-    let classNameDiv ="select-title" 
+    let classNameDiv = "select-title";
     if (vision) {
       classNames = "select-list select-list__block";
-      classNameDiv += " div-activ"
-      
+      classNameDiv += " div-activ";
     }
     let elements = [];
     if (datas) {
@@ -48,7 +45,13 @@ export default class Select extends Component {
         </div>
 
         <ul className={classNames}>
-          <PerfectScrollbar onScrollY={container => console.log(`scrolled to: ${container.scrollTop}.`)}>{elements}</PerfectScrollbar>
+          <PerfectScrollbar
+            onScrollY={(container) =>
+              console.log(`scrolled to: ${container.scrollTop}.`)
+            }
+          >
+            {elements}
+          </PerfectScrollbar>
         </ul>
       </div>
     );
