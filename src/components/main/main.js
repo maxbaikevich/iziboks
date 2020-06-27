@@ -9,7 +9,8 @@ export default class Main extends Component {
  
   this.state = {
     options1 :'любая рубрика',
-    options2 :'любая подрубрика'
+    options2 :'любая подрубрика',
+    
   }
   this.newOptionsItem =(label) => {
     this.setState({
@@ -47,10 +48,13 @@ export default class Main extends Component {
       { label: "любая подрубрика 5", id: 15 },
     ];
     const {options1,options2} = this.state
+    
 
      
     return (
-      <main className="main">
+      <main className="main"
+      onClick={this.revers}
+      >
         <div className="wrapper">
           <h1 className="main-title">
             Онлайн запись в сфере услуг{" "}
@@ -65,7 +69,7 @@ export default class Main extends Component {
             <Select
              onSelectClickItem={this.newOptionsItem}
               options={options1}
-              datas={selectData}
+              datas={selectData} 
             />
             <Select
               onSelectClickItem={this.newOptionsItem2}

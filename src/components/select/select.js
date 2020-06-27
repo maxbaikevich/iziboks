@@ -10,22 +10,21 @@ export default class Select extends Component {
 
     this.state = {
       vision: false,
-
+      revers: false,
+     
     };
     
     this.onSelectClick = () => {
       this.setState((state) => {
         return {
-          vision:!state.vision,
+          vision: !state.vision,
         };
       });
     };
-
-    
   }
   render() {
     const { vision } = this.state;
-    const { datas, onSelectClickItem} = this.props;
+    const { datas, onSelectClickItem } = this.props;
 
     const elements = datas.map((item) => {
       const { id, ...itemProps } = item;
@@ -34,6 +33,7 @@ export default class Select extends Component {
           <SelectItem
             {...itemProps}
             onSelectClickItem={() => onSelectClickItem(item.label)}
+            revers={this.newSostMain}
           />
         </li>
       );
@@ -45,21 +45,14 @@ export default class Select extends Component {
       classNames = "select-list select-list__block";
       classNameDiv += " div-activ";
     }
-  
-
     return (
       <div className="select-box">
-        <div className="select" 
-        onClick={this.onSelectClick}
-        
-         >
+        <div className="select" onClick={this.onSelectClick}>
           <p className={classNameDiv}>{this.props.options}</p>
         </div>
 
         <ul className={classNames}>
-          <PerfectScrollbar>
-            {elements}
-          </PerfectScrollbar>
+          <PerfectScrollbar>{elements}</PerfectScrollbar>
         </ul>
       </div>
     );
