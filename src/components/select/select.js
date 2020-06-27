@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./select.css";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
+import SelectItem from "../select-item";
 
 export default class Select extends Component {
   constructor() {
@@ -9,18 +10,34 @@ export default class Select extends Component {
 
     this.state = {
       vision: false,
+
     };
+    
     this.onSelectClick = () => {
       this.setState((state) => {
         return {
-          vision: !state.vision,
+          vision:!state.vision,
         };
       });
     };
+
+    
   }
   render() {
     const { vision } = this.state;
-    const { datas } = this.props;
+    const { datas, onSelectClickItem} = this.props;
+
+    const elements = datas.map((item) => {
+      const { id, ...itemProps } = item;
+      return (
+        <li key={id} className="sekect-list__item">
+          <SelectItem
+            {...itemProps}
+            onSelectClickItem={() => onSelectClickItem(item.label)}
+          />
+        </li>
+      );
+    });
 
     let classNames = "select-list select-list__none";
     let classNameDiv = "select-title";
@@ -28,28 +45,19 @@ export default class Select extends Component {
       classNames = "select-list select-list__block";
       classNameDiv += " div-activ";
     }
-    let elements = [];
-    if (datas) {
-      elements = datas.map((item) => {
-        return (
-          <li key={item.id} className="sekect-list__item">
-            {item.label}
-          </li>
-        );
-      });
-    }
+  
+
     return (
       <div className="select-box">
-        <div className="select" onClick={this.onSelectClick}>
+        <div className="select" 
+        onClick={this.onSelectClick}
+        
+         >
           <p className={classNameDiv}>{this.props.options}</p>
         </div>
 
         <ul className={classNames}>
-          <PerfectScrollbar
-            onScrollY={(container) =>
-              console.log(`scrolled to: ${container.scrollTop}.`)
-            }
-          >
+          <PerfectScrollbar>
             {elements}
           </PerfectScrollbar>
         </ul>
